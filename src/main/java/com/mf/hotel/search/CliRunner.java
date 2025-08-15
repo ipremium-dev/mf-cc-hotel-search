@@ -30,8 +30,6 @@ public class CliRunner implements CommandLineRunner{
         String strUUID = args[0].trim();
         String jsonParam = args[1].trim();
 
-        System.out.println(jsonParam);
-
 		SearchParam sp = new Gson().fromJson(jsonParam,SearchParam.class);
 
         String responseString = apiSvc.callGet(sp,strUUID);
